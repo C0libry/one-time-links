@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { OneTimeLinkModule } from './one-time-link/one-time-link.module';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
-  imports: [OneTimeLinkModule],
+  imports: [PrismaModule, OneTimeLinkModule],
   controllers: [],
   providers: [],
 })
