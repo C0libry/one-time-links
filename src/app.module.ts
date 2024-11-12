@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
+import { OneTimeLinkModule } from './one-time-link/one-time-link.module';
 
 @Module({
-  imports: [],
+  imports: [OneTimeLinkModule],
   controllers: [],
   providers: [],
 })
