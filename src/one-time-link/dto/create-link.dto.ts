@@ -1,6 +1,4 @@
-import { IsString } from 'class-validator';
+import { CreateLinkRequestSchema } from '@/contracts';
+import { createZodDto } from 'nestjs-zod';
 
-export class CreateLinkDto {
-  @IsString()
-  message: string;
-}
+export class CreateLinkDto extends createZodDto(CreateLinkRequestSchema) {}

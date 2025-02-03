@@ -34,7 +34,7 @@ export class OneTimeLinkController {
   ): Promise<string> {
     const link = await this.oneTimeLinkService.getById(id);
 
-    if (!link) throw new NotFoundException('Link was not found');
+    if (!link) throw new NotFoundException('Link was not found.');
     if (link.isUsed) throw new GoneException('This link has been used!');
 
     await this.oneTimeLinkService.useLink(id);
