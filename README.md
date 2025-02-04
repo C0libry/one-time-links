@@ -33,7 +33,7 @@ docker compose up -d
 ```
 ### Шаг 4: Применить миграции
 ```bash
-docker compose exec -it app npx prisma migrate dev
+docker compose exec -it app npx prisma migrate deploy
 ```
 
 ---
